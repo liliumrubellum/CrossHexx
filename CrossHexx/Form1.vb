@@ -15,6 +15,7 @@ Public Class Form1
 
     Public Const WS_EX_LAYERED = &H80000
     Public Const WS_EX_TRANSPARENT = &H20
+    Public Const WS_EX_TOOLWINDOW = &H80
     Private Const LWA_COLORKEY = &H1
     Public Const LWA_ALPHA = &H2
 
@@ -167,7 +168,7 @@ Public Class Form1
         ListBox1.SelectedIndex = My.Settings.def_set
         Button11_Click(Nothing, Nothing)
 
-        SetWindowLong(Form2.Handle, GWL_EXSTYLE, GetWindowLong(Form2.Handle, GWL_EXSTYLE) Xor WS_EX_LAYERED Xor WS_EX_TRANSPARENT)
+        SetWindowLong(Form2.Handle, GWL_EXSTYLE, GetWindowLong(Form2.Handle, GWL_EXSTYLE) Xor WS_EX_LAYERED Xor WS_EX_TRANSPARENT Or WS_EX_TOOLWINDOW)
 
         SetLayeredWindowAttributes(Form2.Handle, 0, 255, LWA_ALPHA)
         SetWindowPos(Form2.Handle, HWND_TOPMOST, 0, 0, 0, 0,
