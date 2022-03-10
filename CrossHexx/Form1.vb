@@ -441,9 +441,9 @@ Public Class Form1
 
         ElseIf types_in = "dot" Then
             If sizes_in = "small" Then
-                path.AddEllipse(New Rectangle(15, 15, 4, 4))
+                path.AddEllipse(New Rectangle(15, 15, 5, 5))
             ElseIf sizes_in = "large" Then
-                path.AddEllipse(New Rectangle(13, 13, 8, 8))
+                path.AddEllipse(New Rectangle(14, 14, 7, 7))
             End If
 
         ElseIf types_in = "circle" Then
@@ -566,7 +566,7 @@ Public Class Form1
             TOPMOST_FLAGS)
         Dim path As New System.Drawing.Drawing2D.GraphicsPath()
         '丸を描く
-        path.AddEllipse(New Rectangle(15, 15, 4, 4))
+        path.AddEllipse(New Rectangle(15, 15, 5, 5))
 
         f.Region = New Region(path)
         'TopLevelをFalseにする
@@ -659,7 +659,7 @@ Public Class Form1
 
         Dim path As New System.Drawing.Drawing2D.GraphicsPath()
         '丸を描く
-        path.AddEllipse(New Rectangle(13, 13, 8, 8))
+        path.AddEllipse(New Rectangle(14, 14, 7, 7))
 
         f.Region = New Region(path)
         'TopLevelをFalseにする
